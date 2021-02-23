@@ -11,7 +11,7 @@ trait ApiResponseTrait{
               'message'=>$message,
               'code'=>$code
           ],
-            $status
+          $status
         );
     }
 }
