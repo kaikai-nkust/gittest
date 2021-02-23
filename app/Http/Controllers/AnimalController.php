@@ -36,7 +36,7 @@ class AnimalController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //新增資料區域
         $animal=Animal::create($request->all());
         $animal=$animal->refresh();
         return response($animal,Response::HTTP_CREATED);
@@ -84,6 +84,8 @@ class AnimalController extends Controller
      */
     public function destroy(Animal $animal)
     {
-        //
+        //刪除資料區域
+        $animal->delete();
+        return response(null,Response::HTTP_NO_CONTENT);
     }
 }
